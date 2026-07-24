@@ -1,0 +1,1066 @@
+fileFormatVersion: 2
+guid: 7128d6aee6344f6479444d85c14405f6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3389242168301294619
+    second: boom 1_0
+  - first:
+      213: 1058957383805472589
+    second: boom 1_1
+  - first:
+      213: -540320798801504809
+    second: boom 1_2
+  - first:
+      213: 8308461159839621767
+    second: boom 1_3
+  - first:
+      213: 312349219983928572
+    second: boom 1_4
+  - first:
+      213: -411901366336463663
+    second: boom 1_5
+  - first:
+      213: -1574209440858420280
+    second: boom 1_6
+  - first:
+      213: -3489823544593898087
+    second: boom 1_7
+  - first:
+      213: -4766514073720782084
+    second: boom 1_8
+  - first:
+      213: -7208802853545554088
+    second: boom 1_9
+  - first:
+      213: -7149812948933277180
+    second: boom 1_10
+  - first:
+      213: 3136544824168045041
+    second: boom 1_11
+  - first:
+      213: -2807614646679029047
+    second: boom 1_12
+  - first:
+      213: 1640540845824072787
+    second: boom 1_13
+  - first:
+      213: 2695790336343547799
+    second: boom 1_14
+  - first:
+      213: 8907298456049119825
+    second: boom 1_15
+  - first:
+      213: 4547409544782043741
+    second: boom 1_16
+  - first:
+      213: 2833138624649233867
+    second: boom 1_17
+  - first:
+      213: 2388759131079213940
+    second: boom 1_18
+  - first:
+      213: -7495069268273019871
+    second: boom 1_19
+  - first:
+      213: -1385284269176628653
+    second: boom 1_20
+  - first:
+      213: 3660003148135847688
+    second: boom 1_21
+  - first:
+      213: -6326179153323271041
+    second: boom 1_22
+  - first:
+      213: -62148531338255903
+    second: boom 1_23
+  - first:
+      213: 4909052649597403235
+    second: boom 1_24
+  - first:
+      213: -307403205521341958
+    second: boom 1_25
+  - first:
+      213: 6669954058021456670
+    second: boom 1_26
+  - first:
+      213: -8415092750950802762
+    second: boom 1_27
+  - first:
+      213: -7503821231490572232
+    second: boom 1_28
+  - first:
+      213: 4178391662504043450
+    second: boom 1_29
+  - first:
+      213: -3669368654233090588
+    second: boom 1_30
+  - first:
+      213: 1923630973371637466
+    second: boom 1_31
+  - first:
+      213: -1909416003241843605
+    second: boom 1_32
+  - first:
+      213: -5035577280477962935
+    second: boom 1_33
+  - first:
+      213: -9049887191412729467
+    second: boom 1_34
+  - first:
+      213: 195940662952643452
+    second: boom 1_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boom 1_0
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 907
+        width: 61
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb60a4743ef6f0d0800000000000000
+      internalID: -3389242168301294619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_1
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 963
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4f8006412c22be00800000000000000
+      internalID: 1058957383805472589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_2
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 977
+        width: 28
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d55ea2a8156088f0800000000000000
+      internalID: -540320798801504809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_3
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 919
+        width: 9
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 782ee5e97659d4370800000000000000
+      internalID: 8308461159839621767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_4
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 888
+        width: 24
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfc230fe5ffa55400800000000000000
+      internalID: 312349219983928572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_5
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 933
+        width: 13
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc5401c3e1a84af0800000000000000
+      internalID: -411901366336463663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_6
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 865
+        width: 60
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cb4193aad8472ae0800000000000000
+      internalID: -1574209440858420280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_7
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 58
+        width: 642
+        height: 830
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995afafd9f7a19fc0800000000000000
+      internalID: -3489823544593898087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_8
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 815
+        width: 92
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf209fa34b0f9ddb0800000000000000
+      internalID: -4766514073720782084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_9
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 831
+        width: 54
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f4892afff25fb90800000000000000
+      internalID: -7208802853545554088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_10
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 884
+        width: 41
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40a08581103c6cc90800000000000000
+      internalID: -7149812948933277180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_11
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 880
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f950a246ee378b20800000000000000
+      internalID: 3136544824168045041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_12
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 836
+        width: 64
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ca338eaa595909d0800000000000000
+      internalID: -2807614646679029047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_13
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 777
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35cdcd2153f54c610800000000000000
+      internalID: 1640540845824072787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_14
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 816
+        width: 81
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79f10ba270f596520800000000000000
+      internalID: 2695790336343547799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_15
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 758
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 152713db0c41d9b70800000000000000
+      internalID: 8907298456049119825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_16
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 731
+        width: 111
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a54f443e4ab1f30800000000000000
+      internalID: 4547409544782043741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_17
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 699
+        width: 77
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc508a98194515720800000000000000
+      internalID: 2833138624649233867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_18
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 714
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47382f506c3962120800000000000000
+      internalID: 2388759131079213940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_19
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 670
+        width: 23
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 124c3a9063a2cf790800000000000000
+      internalID: -7495069268273019871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_20
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 677
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a5ac6fb4b76cce0800000000000000
+      internalID: -1385284269176628653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_21
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 651
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807d271c871fac230800000000000000
+      internalID: 3660003148135847688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_22
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 623
+        width: 83
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7c5facd395e438a0800000000000000
+      internalID: -6326179153323271041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_23
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 601
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e165427d34332ff0800000000000000
+      internalID: -62148531338255903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_24
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 603
+        width: 25
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36081f22065702440800000000000000
+      internalID: 4909052649597403235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_25
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 570
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af1851cc962ebbbf0800000000000000
+      internalID: -307403205521341958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_26
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 582
+        width: 52
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1b4b8870ef609c50800000000000000
+      internalID: 6669954058021456670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_27
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 536
+        width: 33
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6badc936ab5973b80800000000000000
+      internalID: -8415092750950802762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_28
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 540
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83068fec8521dd790800000000000000
+      internalID: -7503821231490572232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_29
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 532
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab3e1083411acf930800000000000000
+      internalID: 4178391662504043450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_30
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 490
+        width: 30
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e5cb7e66a8c31dc0800000000000000
+      internalID: -3669368654233090588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_31
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 445
+        width: 95
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade51cead2c12ba10800000000000000
+      internalID: 1923630973371637466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_32
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 484
+        width: 71
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b64e256f2446085e0800000000000000
+      internalID: -1909416003241843605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_33
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 456
+        width: 35
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94d551e94290e1ab0800000000000000
+      internalID: -5035577280477962935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_34
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 391
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5899c7a3c87586280800000000000000
+      internalID: -9049887191412729467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom 1_35
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 387
+        width: 68
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7bc85caefe18b200800000000000000
+      internalID: 195940662952643452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      boom 1_0: -3389242168301294619
+      boom 1_1: 1058957383805472589
+      boom 1_10: -7149812948933277180
+      boom 1_11: 3136544824168045041
+      boom 1_12: -2807614646679029047
+      boom 1_13: 1640540845824072787
+      boom 1_14: 2695790336343547799
+      boom 1_15: 8907298456049119825
+      boom 1_16: 4547409544782043741
+      boom 1_17: 2833138624649233867
+      boom 1_18: 2388759131079213940
+      boom 1_19: -7495069268273019871
+      boom 1_2: -540320798801504809
+      boom 1_20: -1385284269176628653
+      boom 1_21: 3660003148135847688
+      boom 1_22: -6326179153323271041
+      boom 1_23: -62148531338255903
+      boom 1_24: 4909052649597403235
+      boom 1_25: -307403205521341958
+      boom 1_26: 6669954058021456670
+      boom 1_27: -8415092750950802762
+      boom 1_28: -7503821231490572232
+      boom 1_29: 4178391662504043450
+      boom 1_3: 8308461159839621767
+      boom 1_30: -3669368654233090588
+      boom 1_31: 1923630973371637466
+      boom 1_32: -1909416003241843605
+      boom 1_33: -5035577280477962935
+      boom 1_34: -9049887191412729467
+      boom 1_35: 195940662952643452
+      boom 1_4: 312349219983928572
+      boom 1_5: -411901366336463663
+      boom 1_6: -1574209440858420280
+      boom 1_7: -3489823544593898087
+      boom 1_8: -4766514073720782084
+      boom 1_9: -7208802853545554088
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

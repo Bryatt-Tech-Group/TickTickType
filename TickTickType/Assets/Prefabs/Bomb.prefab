@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6af21eefd387e848b65e1ecbb157466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bomb
-  baseTime: 30
+  baseTime: 5
   timerSLabel: {fileID: 3116864409731671330}
   timerMSLabel: {fileID: 249004202801676335}
 --- !u!1 &9075439079615996281

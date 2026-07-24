@@ -4,47 +4,35 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public Button myButton;
-    public TextMeshProUGUI buttonLabel; // optional, if you want to change text
-
-    public Button exitButton;
-
-    private int clickCount = 0;
+    public GameObject startScreen;
+    public GameObject endScreen;
+    public Bomb bomb;
+    public Button playButton;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        myButton.onClick.AddListener(OnButtonClick);
-        exitButton.onClick.AddListener(OnExitButtonClick);
+        playButton.onClick.AddListener(OnPlayButtonClick);
+        bomb.OnEndPlay += OnEndPlay;
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        startScreen.SetActive(true);
+        endScreen.SetActive(false);
+        bomb.gameObject.SetActive(true);
     }
     
     void OnDestroy()
     {
-        // Good practice: remove listener when object is destroyed
-        myButton.onClick.RemoveListener(OnButtonClick);
-    }
-    
-    void OnButtonClick()
-    {
-        clickCount++;
-        Debug.Log("Button clicked! Count: " + clickCount);
-
-        if (buttonLabel != null)
-        {
-            buttonLabel.text = "Clicked " + clickCount + " times";
-        }
+        playButton.onClick.RemoveListener(OnPlayButtonClick);
     }
 
-    void OnExitButtonClick()
+    void OnPlayButtonClick()
     {
-        Debug.Log("quit");
-        Application.Quit();
+        startScreen.SetActive(false);
+        bomb.BeginPlay();
+    }
+
+    void OnEndPlay()
+    {
+        bomb.gameObject.SetActive(false);
+        endScreen.SetActive(true);
     }
 }
