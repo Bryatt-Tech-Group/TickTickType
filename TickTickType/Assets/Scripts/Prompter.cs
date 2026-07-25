@@ -1,86 +1,149 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Prompter : MonoBehaviour
 {
-    public TextMeshProUGUI promptLabel;
-    public string[] prompts;
+    public Transform[] spawnTransforms;
+    public GameObject promptLabelPrefab;
 
-    private string prompt = "";
-    private int promptIndex = 0;
-    private int charIndex = 0;
+    public int maxPrompts = 5;
 
+    private string[] potentialPrompts;
+    private List<string> activePrompts = new List<string>();
+    private List<GameObject> promptLabels = new List<GameObject>();
+    private int currentPromptIndex = -1;
+    private int currentCharIndex = -1;
     private bool bPlaying = false;
     
     void Start()
     {
-        bPlaying = true;
-        charIndex = 0;
-        prompt = prompts[promptIndex];
-        SetCharIndex(0);
-    }
+        TextAsset wordFile = Resources.Load<TextAsset>("wordlist");
+        potentialPrompts = wordFile.text.Split('\n');
 
-    void SetCharIndex(int index)
-    {
-        promptLabel.text = "<color=#FFFFFF>" + prompt.Substring(0, index) + "</color><color=#000000>" + prompt.Substring(index) + "</color>";
+        // Clean up each entry.
+        for (int i = 0; i < potentialPrompts.Length; i++)
+        {
+            potentialPrompts[i] = potentialPrompts[i].Trim();
+        }
+
+        activePrompts = new List<string>(maxPrompts);
+        promptLabels = new List<GameObject>(maxPrompts);
+
+        // Initialize all prompt labels.
+        for (int i = 0; i < maxPrompts; i++)
+        {
+            activePrompts.Add(GetRandomPrompt());
+            
+            GameObject newPrompt = Instantiate(promptLabelPrefab, transform);
+            promptLabels.Add(newPrompt);
+            
+            RectTransform promptRect = newPrompt.GetComponent<RectTransform>();
+            RectTransform spawnRect = spawnTransforms[i].GetComponent<RectTransform>();
+
+            // Match position/rotation/scale to the spawn point
+            promptRect.anchoredPosition = spawnRect.anchoredPosition;
+            promptRect.rotation = spawnRect.rotation;
+            promptRect.localScale = spawnRect.localScale;
+            
+            UpdatePromptLabel(i, 0);
+        }
+        
+        bPlaying = true;
     }
     
     void Update()
     {
         if (!bPlaying) return;
-        
-        if (charIndex >= prompt.Length)
-            return;
 
-        if (Keyboard.current == null)
-            return; // no keyboard connected
-
-        char expected = prompt[charIndex];
-        Key expectedKey = CharToKey(expected);
-
-        if (expectedKey != Key.None && Keyboard.current[expectedKey].wasPressedThisFrame)
+        // Try to select a prompt if one is not already selected.
+        if (currentPromptIndex == -1)
         {
-            SetCharIndex(++charIndex);
-            Debug.Log($"Correct! ({charIndex}/{prompt.Length})");
-
-            if (charIndex >= prompt.Length)
+            for (int i = 0; i < maxPrompts; i++)
             {
-                OnPromptComplete();
+                Key expectedKey = GetExpectedKey(i, 0);
+
+                if (IsKeyPressed(expectedKey))
+                {
+                    Debug.Log(activePrompts[i]);
+                    
+                    currentPromptIndex = i;
+                    currentCharIndex = 0;
+                    break;
+                }
             }
         }
+
+        // If a prompt is selected, try to solve it!
+        if (currentPromptIndex != -1)
+        {
+            Key expectedKey = GetExpectedKey(currentPromptIndex, currentCharIndex);
+
+            if (IsKeyPressed(expectedKey))
+            {
+                UpdatePromptLabel(currentPromptIndex, ++currentCharIndex);
+
+                if (currentCharIndex >= activePrompts[currentPromptIndex].Length)
+                {
+                    OnPromptComplete();
+                }
+            }
+        }
+    }
+
+    Key GetExpectedKey(int promptIndex, int charIndex)
+    {
+        return CharToKey(activePrompts[promptIndex][charIndex]);
+    }
+
+    bool IsKeyPressed(Key key)
+    {
+        return key != Key.None && Keyboard.current[key].wasPressedThisFrame;
     }
 
     Key CharToKey(char c)
     {
         char lower = char.ToLower(c);
+        
         if (lower >= 'a' && lower <= 'z')
         {
             // Key.A through Key.Z map directly by enum offset
             return Key.A + (lower - 'a');
         }
+        
         if (lower >= '0' && lower <= '9')
         {
             return Key.Digit0 + (lower - '0');
         }
-        return Key.None; // extend this for punctuation/space if your prompt needs it
+        
+        return Key.None;
+    }
+
+    void UpdatePromptLabel(int promptIndex, int charIndex)
+    {
+        string prompt = activePrompts[promptIndex];
+        promptLabels[promptIndex].GetComponent<TextMeshProUGUI>().text = "<color=#FFFFFF>" + prompt.Substring(0, charIndex) + "</color><color=#000000>" + prompt.Substring(charIndex) + "</color>";
     }
     
     void OnPromptComplete()
     {
         Debug.Log("Prompt fully typed!");
+
+        currentPromptIndex = -1;
+        currentCharIndex = -1;
+    }
+    
+    string GetRandomPrompt()
+    {
+        string potentialPrompt = "";
+
+        while (potentialPrompt.Length < 4)
+        {
+            potentialPrompt = potentialPrompts[UnityEngine.Random.Range(0, potentialPrompts.Length)];
+        }
         
-        if (++promptIndex >= prompts.Length)
-        {
-            prompt = "Congrats you did it!";
-            bPlaying = false;
-        }
-        else
-        {
-            prompt = prompts[promptIndex];
-            charIndex = 0;
-            SetCharIndex(charIndex);
-        }
+        return potentialPrompt;
     }
 }
