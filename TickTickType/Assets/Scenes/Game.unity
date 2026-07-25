@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 867882422684484144, guid: a45684a31e2c2dd429ede1ed23ef983e, type: 3}
+      propertyPath: sparksPrefab
+      value: 
+      objectReference: {fileID: 2748400117579032180, guid: 0d3c95268fe77ed439d541df2cba7ac7, type: 3}
     - target: {fileID: 2411841675344534531, guid: a45684a31e2c2dd429ede1ed23ef983e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.03375
