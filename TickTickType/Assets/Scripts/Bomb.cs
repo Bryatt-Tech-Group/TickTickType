@@ -52,7 +52,7 @@ public class Bomb : MonoBehaviour
         int currentTimeS = (int)Math.Floor(currentTime);
         int currentTimeMS = (int)((currentTime - currentTimeS) * 100);
         
-        timerSLabel.text = currentTimeS.ToString();
+        timerSLabel.text = currentTimeS.ToString("D3");
         timerMSLabel.text = currentTimeMS.ToString("D2");
     }
 }
