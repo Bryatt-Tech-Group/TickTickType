@@ -6,10 +6,13 @@ using UnityEngine.InputSystem;
 
 public class Prompter : MonoBehaviour
 {
-    public string[] prompts;
     public Transform[] spawnTransforms;
     public GameObject promptLabelPrefab;
 
+    public int maxPrompts = 5;
+
+    private string[] potentialPrompts;
+    private List<string> activePrompts = new List<string>();
     private List<GameObject> promptLabels = new List<GameObject>();
     private int currentPromptIndex = -1;
     private int currentCharIndex = -1;
@@ -17,11 +20,23 @@ public class Prompter : MonoBehaviour
     
     void Start()
     {
-        bPlaying = true;
+        TextAsset wordFile = Resources.Load<TextAsset>("wordlist");
+        potentialPrompts = wordFile.text.Split('\n');
+
+        // Clean up each entry.
+        for (int i = 0; i < potentialPrompts.Length; i++)
+        {
+            potentialPrompts[i] = potentialPrompts[i].Trim();
+        }
+
+        activePrompts = new List<string>(maxPrompts);
+        promptLabels = new List<GameObject>(maxPrompts);
 
         // Initialize all prompt labels.
-        for (int i = 0; i < prompts.Length; i++)
+        for (int i = 0; i < maxPrompts; i++)
         {
+            activePrompts.Add(GetRandomPrompt());
+            
             GameObject newPrompt = Instantiate(promptLabelPrefab, transform);
             promptLabels.Add(newPrompt);
             
@@ -35,6 +50,8 @@ public class Prompter : MonoBehaviour
             
             UpdatePromptLabel(i, 0);
         }
+        
+        bPlaying = true;
     }
     
     void Update()
@@ -44,13 +61,13 @@ public class Prompter : MonoBehaviour
         // Try to select a prompt if one is not already selected.
         if (currentPromptIndex == -1)
         {
-            for (int i = 0; i < prompts.Length; i++)
+            for (int i = 0; i < maxPrompts; i++)
             {
                 Key expectedKey = GetExpectedKey(i, 0);
 
                 if (IsKeyPressed(expectedKey))
                 {
-                    Debug.Log(prompts[i]);
+                    Debug.Log(activePrompts[i]);
                     
                     currentPromptIndex = i;
                     currentCharIndex = 0;
@@ -68,7 +85,7 @@ public class Prompter : MonoBehaviour
             {
                 UpdatePromptLabel(currentPromptIndex, ++currentCharIndex);
 
-                if (currentCharIndex >= prompts[currentPromptIndex].Length)
+                if (currentCharIndex >= activePrompts[currentPromptIndex].Length)
                 {
                     OnPromptComplete();
                 }
@@ -78,7 +95,7 @@ public class Prompter : MonoBehaviour
 
     Key GetExpectedKey(int promptIndex, int charIndex)
     {
-        return CharToKey(prompts[promptIndex][charIndex]);
+        return CharToKey(activePrompts[promptIndex][charIndex]);
     }
 
     bool IsKeyPressed(Key key)
@@ -106,7 +123,7 @@ public class Prompter : MonoBehaviour
 
     void UpdatePromptLabel(int promptIndex, int charIndex)
     {
-        string prompt = prompts[promptIndex];
+        string prompt = activePrompts[promptIndex];
         promptLabels[promptIndex].GetComponent<TextMeshProUGUI>().text = "<color=#FFFFFF>" + prompt.Substring(0, charIndex) + "</color><color=#000000>" + prompt.Substring(charIndex) + "</color>";
     }
     
@@ -116,5 +133,17 @@ public class Prompter : MonoBehaviour
 
         currentPromptIndex = -1;
         currentCharIndex = -1;
+    }
+    
+    string GetRandomPrompt()
+    {
+        string potentialPrompt = "";
+
+        while (potentialPrompt.Length < 4)
+        {
+            potentialPrompt = potentialPrompts[UnityEngine.Random.Range(0, potentialPrompts.Length)];
+        }
+        
+        return potentialPrompt;
     }
 }
