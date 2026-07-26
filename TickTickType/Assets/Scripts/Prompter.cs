@@ -22,7 +22,7 @@ public class Prompter : MonoBehaviour
 
     public event Action OnPromptSolved;
     
-    void Start()
+    void Awake()
     {
         TextAsset wordFile = Resources.Load<TextAsset>("wordlist");
         potentialPrompts = wordFile.text.Split('\n');

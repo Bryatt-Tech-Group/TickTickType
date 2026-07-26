@@ -663,7 +663,7 @@ MonoBehaviour:
   endScreen: {fileID: 5820252607049030239}
   bomb: {fileID: 867882422684484144}
   playButton: {fileID: 5065639121927020387}
-  restartButton: {fileID: 0}
+  restartButton: {fileID: 5028709388432227944}
   dialogueBox: {fileID: 841524991198065773}
   dialogueScript: {fileID: 11400000, guid: 76afb82ac011b5941ae8e614e5a84cbb, type: 2}
   musicManager: {fileID: 101695794641670004}
@@ -1735,6 +1735,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 441522168168700434, guid: 48c7109adaeea1e4699443c9e4aa0b93, type: 3}
   m_PrefabInstance: {fileID: 4901275656061815075}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5028709388432227944 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 129835513039894347, guid: 48c7109adaeea1e4699443c9e4aa0b93, type: 3}
+  m_PrefabInstance: {fileID: 4901275656061815075}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &5820252607049030239 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1495587417320018812, guid: 48c7109adaeea1e4699443c9e4aa0b93, type: 3}
