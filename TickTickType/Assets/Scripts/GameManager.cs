@@ -17,16 +17,21 @@ public class GameManager : MonoBehaviour
     public AudioClip GameplaySong;
     public AudioClip EndingSong;
     
+    private int promptsSolved = 0;
+    
     void Start()
     {
         playButton.onClick.AddListener(OnPlayButtonClick);
         dialogueBox.OnDialogueEnd += StartBombSequence;
         bomb.OnEndPlay += OnEndPlay;
+        bomb.prompter.OnPromptSolved += OnPromptSolved;
         
         startScreen.SetActive(true);
         endScreen.SetActive(false);
-        bomb.gameObject.SetActive(true);
+        bomb.gameObject.SetActive(false);
         dialogueBox.gameObject.SetActive(false);
+        
+        promptsSolved = 0;
         
         musicManager.PlaySong(OpeningSong);
     }
@@ -39,8 +44,7 @@ public class GameManager : MonoBehaviour
     void OnPlayButtonClick()
     {
         startScreen.SetActive(false);
-        //bomb.BeginPlay();
-        
+        bomb.gameObject.SetActive(true);
         dialogueBox.StartDialogue(dialogueScript);
     }
 
@@ -55,5 +59,11 @@ public class GameManager : MonoBehaviour
         bomb.gameObject.SetActive(false);
         endScreen.SetActive(true);
         musicManager.PlaySong(EndingSong);
+    }
+
+    void OnPromptSolved()
+    {
+        bomb.RecoverTime();
+        promptsSolved++;
     }
 }

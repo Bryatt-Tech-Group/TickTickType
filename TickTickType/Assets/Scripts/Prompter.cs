@@ -10,6 +10,8 @@ public class Prompter : MonoBehaviour
     public GameObject promptLabelPrefab;
 
     public int maxPrompts = 5;
+    int minPromptLength = 4;
+    int maxPromptLength = 10;
 
     private string[] potentialPrompts;
     private List<string> activePrompts = new List<string>();
@@ -17,6 +19,8 @@ public class Prompter : MonoBehaviour
     private int currentPromptIndex = -1;
     private int currentCharIndex = -1;
     private bool bPlaying = false;
+
+    public event Action OnPromptSolved;
     
     void Start()
     {
@@ -70,8 +74,6 @@ public class Prompter : MonoBehaviour
 
                 if (IsKeyPressed(expectedKey))
                 {
-                    Debug.Log(activePrompts[i]);
-                    
                     currentPromptIndex = i;
                     currentCharIndex = 0;
                     break;
@@ -133,20 +135,42 @@ public class Prompter : MonoBehaviour
     void OnPromptComplete()
     {
         Debug.Log("Prompt fully typed!");
+        
+        activePrompts[currentPromptIndex] = GetRandomPrompt();
+        UpdatePromptLabel(currentPromptIndex, 0);
 
         currentPromptIndex = -1;
         currentCharIndex = -1;
+        
+        OnPromptSolved?.Invoke();
+    }
+
+    public void IncreaseDifficulty()
+    {
+        minPromptLength++;
+        maxPromptLength++;
     }
     
     string GetRandomPrompt()
     {
         string potentialPrompt = "";
+        bool firstLetterConflict = true;
 
-        while (potentialPrompt.Length < 4)
+        while (potentialPrompt.Length < minPromptLength || potentialPrompt.Length >= maxPromptLength || firstLetterConflict)
         {
             potentialPrompt = potentialPrompts[UnityEngine.Random.Range(0, potentialPrompts.Length)];
+
+            firstLetterConflict = false;
+            foreach (string active in activePrompts)
+            {
+                if (active.Length > 0 && potentialPrompt[0] == active[0])
+                {
+                    firstLetterConflict = true;
+                    break;
+                }
+            }
         }
-        
+
         return potentialPrompt;
     }
 }

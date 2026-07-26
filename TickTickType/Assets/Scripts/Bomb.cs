@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
     public float baseTime = 30.0f;
+    public float recoveryTime = 1.0f;
     private float currentTime = 0.0f;
     private bool bPlaying = false;
 
@@ -76,6 +77,11 @@ public class Bomb : MonoBehaviour
         timerMSLabel.text = currentTimeMS.ToString("D2");
     }
 
+    public void RecoverTime()
+    {
+        SetTime(currentTime + recoveryTime);
+    }
+
     void ScheduleNextSpawn()
     {
         timer = 0f;
@@ -94,7 +100,5 @@ public class Bomb : MonoBehaviour
         );
 
         Instantiate(sparksPrefab, spawnPosition, Quaternion.identity, transform);
-
-        //Instantiate(sparksPrefab, transform);
     }
 }
