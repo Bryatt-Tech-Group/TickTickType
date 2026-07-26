@@ -30,16 +30,19 @@ public class Prompter : MonoBehaviour
         }
 
         activePrompts = new List<string>(maxPrompts);
-        promptLabels = new List<GameObject>(maxPrompts);
+        promptLabels = new List<GameObject>(maxPrompts);    
+    }
 
+    public void BeginPlay()
+    {
         // Initialize all prompt labels.
         for (int i = 0; i < maxPrompts; i++)
         {
             activePrompts.Add(GetRandomPrompt());
-            
+
             GameObject newPrompt = Instantiate(promptLabelPrefab, transform);
             promptLabels.Add(newPrompt);
-            
+
             RectTransform promptRect = newPrompt.GetComponent<RectTransform>();
             RectTransform spawnRect = spawnTransforms[i].GetComponent<RectTransform>();
 
@@ -47,13 +50,13 @@ public class Prompter : MonoBehaviour
             promptRect.anchoredPosition = spawnRect.anchoredPosition;
             promptRect.rotation = spawnRect.rotation;
             promptRect.localScale = spawnRect.localScale;
-            
+
             UpdatePromptLabel(i, 0);
         }
-        
+
         bPlaying = true;
     }
-    
+
     void Update()
     {
         if (!bPlaying) return;

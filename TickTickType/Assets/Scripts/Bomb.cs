@@ -11,6 +11,8 @@ public class Bomb : MonoBehaviour
     public TextMeshProUGUI timerSLabel;
     public TextMeshProUGUI timerMSLabel;
 
+    public Prompter prompter;
+
     public GameObject sparksPrefab;
 
     public float minSpawnInterval = 0.5f;
@@ -53,6 +55,7 @@ public class Bomb : MonoBehaviour
     public void BeginPlay()
     {
         bPlaying = true;
+        prompter.BeginPlay();
     }
 
     void EndPlay()
