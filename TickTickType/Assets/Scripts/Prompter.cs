@@ -25,6 +25,11 @@ public class Prompter : MonoBehaviour
     void Awake()
     {
         TextAsset wordFile = Resources.Load<TextAsset>("wordlist");
+        if (wordFile == null)
+        {
+            Debug.LogError("Could not load wordlist.txt from Resources folder! Check the path/filename.");
+            return;
+        }
         potentialPrompts = wordFile.text.Split('\n');
 
         // Clean up each entry.
@@ -34,11 +39,18 @@ public class Prompter : MonoBehaviour
         }
 
         activePrompts = new List<string>(maxPrompts);
-        promptLabels = new List<GameObject>(maxPrompts);    
+        promptLabels = new List<GameObject>(maxPrompts);
+
+        foreach (Transform t in spawnTransforms)
+        {
+            t.gameObject.SetActive(false);
+        }
     }
 
     public void BeginPlay()
     {
+        gameObject.SetActive(true);
+        
         // Initialize all prompt labels.
         for (int i = 0; i < maxPrompts; i++)
         {
