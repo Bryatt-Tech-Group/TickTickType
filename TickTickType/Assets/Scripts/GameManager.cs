@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public AudioClip GameplaySong;
     public AudioClip EndingSong;
     
+    public int promptsPerLevel = 5;
     private int promptsSolved = 0;
     
     void Start()
@@ -66,9 +67,13 @@ public class GameManager : MonoBehaviour
 
     void OnPromptSolved()
     {
-        //bomb.RecoverTime();
         bomb.RemoveSpark();
         promptsSolved++;
+
+        if (promptsSolved % promptsPerLevel == 0)
+        {
+            bomb.prompter.IncreaseDifficulty();
+        }
     }
     
     public void RestartGame()
