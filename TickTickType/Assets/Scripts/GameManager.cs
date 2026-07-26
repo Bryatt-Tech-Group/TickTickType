@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,7 +19,10 @@ public class GameManager : MonoBehaviour
     public AudioClip OpeningSong;
     public AudioClip GameplaySong;
     public AudioClip EndingSong;
-    
+
+    public AudioClip meow1;
+    public AudioClip meow2;
+
     public int promptsPerLevel = 5;
     private int promptsSolved = 0;
     
@@ -47,6 +51,7 @@ public class GameManager : MonoBehaviour
 
     void OnPlayButtonClick()
     {
+        musicManager.PlaySfx(meow1);
         startScreen.SetActive(false);
         bomb.gameObject.SetActive(true);
         dialogueBox.StartDialogue(dialogueScript);
@@ -75,9 +80,17 @@ public class GameManager : MonoBehaviour
             bomb.prompter.IncreaseDifficulty();
         }
     }
-    
+
     public void RestartGame()
     {
+        musicManager.PlaySfx(meow2);
+        StartCoroutine(RestartAfterMeow());
+    }
+
+    IEnumerator RestartAfterMeow()
+    {
+        yield return new WaitForSeconds(meow2 != null ? meow2.length : 0f);
+
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
     }

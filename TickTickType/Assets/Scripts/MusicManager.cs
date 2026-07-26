@@ -5,6 +5,7 @@ public class MusicManager : MonoBehaviour
 {
     public AudioSource sourceA;
     public AudioSource sourceB;
+    public AudioSource sfxSource;
     public float fadeDuration = 1.5f;
 
     private AudioSource activeSource;
@@ -48,5 +49,13 @@ public class MusicManager : MonoBehaviour
 
         // Swap roles
         (activeSource, inactiveSource) = (inactiveSource, activeSource);
+    }
+
+    public void PlaySfx(AudioClip clip, float pitchVariation = 0f)
+    {
+        if (clip == null || sfxSource == null) return;
+
+        sfxSource.pitch = 1f + Random.Range(-pitchVariation, pitchVariation);
+        sfxSource.PlayOneShot(clip);
     }
 }

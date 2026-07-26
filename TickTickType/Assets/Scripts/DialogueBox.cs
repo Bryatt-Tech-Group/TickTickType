@@ -13,7 +13,8 @@ public class DialogueBox : MonoBehaviour
     public TextMeshProUGUI speakerNameText;
     public Image portraitImage;
     public AudioSource audioSource;
-    public AudioClip blipSound;
+    public AudioClip[] blipSounds;
+    public float blipPitchVariation = 0.15f;
 
     [Header("Continue Indicator")]
     public RectTransform continueIndicator; // the little arrow/icon GameObject
@@ -121,9 +122,11 @@ public class DialogueBox : MonoBehaviour
             if (fullText[i] != ' ')
             {
                 bool shouldPlay = playBlipEveryCharacter || (i % blipEveryNCharacters == 0);
-                if (shouldPlay && blipSound != null)
+                if (shouldPlay && audioSource != null && blipSounds.Length > 0)
                 {
-                    audioSource.PlayOneShot(blipSound);
+                    AudioClip clip = blipSounds[UnityEngine.Random.Range(0, blipSounds.Length)];
+                    audioSource.pitch = 1f + UnityEngine.Random.Range(-blipPitchVariation, blipPitchVariation);
+                    audioSource.PlayOneShot(clip);
                 }
             }
 
