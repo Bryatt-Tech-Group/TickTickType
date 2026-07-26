@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -8,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject endScreen;
     public Bomb bomb;
     public Button playButton;
+    public Button restartButton;
 
     public DialogueBox dialogueBox;
     public DialogueScript dialogueScript;
@@ -22,6 +24,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         playButton.onClick.AddListener(OnPlayButtonClick);
+        restartButton.onClick.AddListener(RestartGame);
         dialogueBox.OnDialogueEnd += StartBombSequence;
         bomb.OnEndPlay += OnEndPlay;
         bomb.prompter.OnPromptSolved += OnPromptSolved;
@@ -66,5 +69,11 @@ public class GameManager : MonoBehaviour
         //bomb.RecoverTime();
         bomb.RemoveSpark();
         promptsSolved++;
+    }
+    
+    public void RestartGame()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
     }
 }
