@@ -1,6 +1,20 @@
+using JetBrains.Annotations;
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+
+public class SparkTime
+{
+    public GameObject spark;
+    public float spawnTime;
+
+    public SparkTime(GameObject spark, float spawnTime)
+    {
+        this.spark = spark;
+        this.spawnTime = spawnTime;
+    }
+}
 
 public class Bomb : MonoBehaviour
 {
@@ -15,6 +29,7 @@ public class Bomb : MonoBehaviour
     public Prompter prompter;
 
     public GameObject sparksPrefab;
+    private Stack<SparkTime> activeSparks = new Stack<SparkTime>();
 
     public float minSpawnInterval = 0.5f;
     public float maxSpawnInterval = 1.5f;
@@ -99,6 +114,16 @@ public class Bomb : MonoBehaviour
             -1
         );
 
-        Instantiate(sparksPrefab, spawnPosition, Quaternion.identity, transform);
+        activeSparks.Push(new SparkTime(Instantiate(sparksPrefab, spawnPosition, Quaternion.identity, transform), currentTime));
+    }
+
+    public void RemoveSpark()
+    {
+        if (activeSparks.Count <= 0) return;
+
+        SparkTime sparkTime = activeSparks.Pop();
+        SetTime(sparkTime.spawnTime);
+
+        Destroy(sparkTime.spark);
     }
 }

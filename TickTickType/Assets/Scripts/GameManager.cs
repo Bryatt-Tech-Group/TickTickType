@@ -63,7 +63,8 @@ public class GameManager : MonoBehaviour
 
     void OnPromptSolved()
     {
-        bomb.RecoverTime();
+        //bomb.RecoverTime();
+        bomb.RemoveSpark();
         promptsSolved++;
     }
 }
