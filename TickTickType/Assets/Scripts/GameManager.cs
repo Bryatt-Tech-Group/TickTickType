@@ -12,6 +12,11 @@ public class GameManager : MonoBehaviour
     public DialogueBox dialogueBox;
     public DialogueScript dialogueScript;
     
+    public MusicManager musicManager;
+    public AudioClip OpeningSong;
+    public AudioClip GameplaySong;
+    public AudioClip EndingSong;
+    
     void Start()
     {
         playButton.onClick.AddListener(OnPlayButtonClick);
@@ -22,6 +27,8 @@ public class GameManager : MonoBehaviour
         endScreen.SetActive(false);
         bomb.gameObject.SetActive(true);
         dialogueBox.gameObject.SetActive(false);
+        
+        musicManager.PlaySong(OpeningSong);
     }
     
     void OnDestroy()
@@ -40,11 +47,13 @@ public class GameManager : MonoBehaviour
     void StartBombSequence()
     {
         bomb.BeginPlay();
+        musicManager.PlaySong(GameplaySong);
     }
 
     void OnEndPlay()
     {
         bomb.gameObject.SetActive(false);
         endScreen.SetActive(true);
+        musicManager.PlaySong(EndingSong);
     }
 }
