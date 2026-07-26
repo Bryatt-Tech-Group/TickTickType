@@ -403,6 +403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bomb
   baseTime: 5
+  recoveryTime: 1
   timerSLabel: {fileID: 3116864409731671330}
   timerMSLabel: {fileID: 249004202801676335}
   prompter: {fileID: 5353031106768620515}
@@ -554,30 +555,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3883102827365635831}
     m_Modifications:
-    - target: {fileID: 308664303453171260, guid: 341006f453fadae41a14bd97b0277577, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 473
-      objectReference: {fileID: 0}
-    - target: {fileID: 308664303453171260, guid: 341006f453fadae41a14bd97b0277577, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -318
-      objectReference: {fileID: 0}
-    - target: {fileID: 481353256416192141, guid: 341006f453fadae41a14bd97b0277577, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1281915273555861286, guid: 341006f453fadae41a14bd97b0277577, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381694237769242519, guid: 341006f453fadae41a14bd97b0277577, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 485
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381694237769242519, guid: 341006f453fadae41a14bd97b0277577, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 313
-      objectReference: {fileID: 0}
     - target: {fileID: 4848222292268044865, guid: 341006f453fadae41a14bd97b0277577, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -658,41 +635,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5495164626680540789, guid: 341006f453fadae41a14bd97b0277577, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -294
-      objectReference: {fileID: 0}
-    - target: {fileID: 5495164626680540789, guid: 341006f453fadae41a14bd97b0277577, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 324
-      objectReference: {fileID: 0}
-    - target: {fileID: 6467275404834987887, guid: 341006f453fadae41a14bd97b0277577, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7349658472152038952, guid: 341006f453fadae41a14bd97b0277577, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7511992498723537348, guid: 341006f453fadae41a14bd97b0277577, type: 3}
       propertyPath: m_Name
       value: Prompter
-      objectReference: {fileID: 0}
-    - target: {fileID: 7925936169985146663, guid: 341006f453fadae41a14bd97b0277577, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -307
-      objectReference: {fileID: 0}
-    - target: {fileID: 8105886531561279282, guid: 341006f453fadae41a14bd97b0277577, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -647
-      objectReference: {fileID: 0}
-    - target: {fileID: 8105886531561279282, guid: 341006f453fadae41a14bd97b0277577, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -324
-      objectReference: {fileID: 0}
-    - target: {fileID: 8681897049672175165, guid: 341006f453fadae41a14bd97b0277577, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
