@@ -10,9 +10,8 @@ public class Prompter : MonoBehaviour
     public GameObject promptLabelPrefab;
 
     public int maxPrompts = 5;
-    int minPromptLength = 4;
-    int maxPromptLength = 5;
-    int realMaxPromptLength = 10;
+    int promptLength = 4;
+    int maxPromptLength = 10;
 
     private string[] potentialPrompts;
     private List<string> activePrompts = new List<string>();
@@ -160,11 +159,9 @@ public class Prompter : MonoBehaviour
 
     public void IncreaseDifficulty()
     {
-        minPromptLength++;
-        maxPromptLength++;
+        promptLength++;
         
-        if (minPromptLength > realMaxPromptLength) minPromptLength = realMaxPromptLength;
-        if (maxPromptLength > realMaxPromptLength) maxPromptLength = realMaxPromptLength;
+        if (promptLength > maxPromptLength) promptLength = maxPromptLength;
     }
     
     string GetRandomPrompt()
@@ -172,7 +169,7 @@ public class Prompter : MonoBehaviour
         string potentialPrompt = "";
         bool firstLetterConflict = true;
 
-        while (potentialPrompt.Length < minPromptLength || potentialPrompt.Length >= maxPromptLength || firstLetterConflict)
+        while (potentialPrompt.Length != promptLength || firstLetterConflict)
         {
             potentialPrompt = potentialPrompts[UnityEngine.Random.Range(0, potentialPrompts.Length)];
 

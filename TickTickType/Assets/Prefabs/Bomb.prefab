@@ -402,14 +402,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6af21eefd387e848b65e1ecbb157466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bomb
-  baseTime: 5
+  baseTime: 30
   recoveryTime: 1
   timerSLabel: {fileID: 3116864409731671330}
   timerMSLabel: {fileID: 249004202801676335}
   prompter: {fileID: 5353031106768620515}
   sparksPrefab: {fileID: 2748400117579032180, guid: 0d3c95268fe77ed439d541df2cba7ac7, type: 3}
-  minSpawnInterval: 0.5
-  maxSpawnInterval: 1.5
+  minSpawnInterval: 3
+  maxSpawnInterval: 6
 --- !u!1 &9075439079615996281
 GameObject:
   m_ObjectHideFlags: 0
