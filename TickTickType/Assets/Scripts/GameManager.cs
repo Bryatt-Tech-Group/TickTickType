@@ -8,15 +8,20 @@ public class GameManager : MonoBehaviour
     public GameObject endScreen;
     public Bomb bomb;
     public Button playButton;
+
+    public DialogueBox dialogueBox;
+    public DialogueScript dialogueScript;
     
     void Start()
     {
         playButton.onClick.AddListener(OnPlayButtonClick);
+        dialogueBox.OnDialogueEnd += StartBombSequence;
         bomb.OnEndPlay += OnEndPlay;
         
         startScreen.SetActive(true);
         endScreen.SetActive(false);
         bomb.gameObject.SetActive(true);
+        dialogueBox.gameObject.SetActive(false);
     }
     
     void OnDestroy()
@@ -27,6 +32,13 @@ public class GameManager : MonoBehaviour
     void OnPlayButtonClick()
     {
         startScreen.SetActive(false);
+        //bomb.BeginPlay();
+        
+        dialogueBox.StartDialogue(dialogueScript);
+    }
+
+    void StartBombSequence()
+    {
         bomb.BeginPlay();
     }
 
