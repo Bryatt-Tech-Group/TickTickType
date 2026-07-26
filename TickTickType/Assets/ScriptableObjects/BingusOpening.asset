@@ -13,21 +13,21 @@ MonoBehaviour:
   m_Name: BingusOpening
   m_EditorClassIdentifier: Assembly-CSharp::DialogueScript
   lines:
-  - speakerName: Bingus <3
+  - speakerName: Bingus
     text: hi! nice to meeowt you!
     mood: 0
-  - speakerName: Bingus <3
+  - speakerName: Bingus
     text: my name is bingus, and I run this cat orphanage for cats
     mood: 0
-  - speakerName: Bingus <3
+  - speakerName: Bingus
     text: unfortunately, someone left an incendiary device in the living room
     mood: 0
-  - speakerName: Bingus <3
+  - speakerName: Bingus
     text: and if you can't defuse it we're all gonna explode!
     mood: 0
-  - speakerName: Bingus <3
+  - speakerName: Bingus
     text: well, I guess you can't really defuse it...
     mood: 0
-  - speakerName: Bingus <3
+  - speakerName: Bingus
     text: but if you can type really fast, maybe you'll perpetuate our tortured existence!
     mood: 0
