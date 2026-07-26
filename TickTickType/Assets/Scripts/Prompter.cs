@@ -11,7 +11,8 @@ public class Prompter : MonoBehaviour
 
     public int maxPrompts = 5;
     int minPromptLength = 4;
-    int maxPromptLength = 10;
+    int maxPromptLength = 5;
+    int realMaxPromptLength = 10;
 
     private string[] potentialPrompts;
     private List<string> activePrompts = new List<string>();
@@ -161,6 +162,9 @@ public class Prompter : MonoBehaviour
     {
         minPromptLength++;
         maxPromptLength++;
+        
+        if (minPromptLength > realMaxPromptLength) minPromptLength = realMaxPromptLength;
+        if (maxPromptLength > realMaxPromptLength) maxPromptLength = realMaxPromptLength;
     }
     
     string GetRandomPrompt()
